@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Signup</title></head>
+<body>
+  <h2>Signup</h2>
+  {% for message in messages %}<p>{{ message }}</p>{% endfor %}
+  <form method="post">
+    {% csrf_token %}
+    <label>Username:</label><input type="text" name="username"><br>
+    <label>Email:</label><input type="email" name="email"><br>
+    <label>Password:</label><input type="password" name="password"><br>
+    <button type="submit">Signup</button>
+  </form>
+  <a href="{% url 'login' %}">Already have an account? Login</a>
+</body>
+</html>
+
