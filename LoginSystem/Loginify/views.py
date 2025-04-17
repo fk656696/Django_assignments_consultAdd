@@ -1,14 +1,13 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import UserDetails
 from .models import Contact
 from django.contrib import messages
-from .serializers import ContactSerilizer
+from .serializers import ContactSerializer
 import json
 from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
-
 
 def hello_world(request):
     return HttpResponse("Hello, world!")

@@ -13,7 +13,7 @@ class Contact(models.Model):
     message = models.TextField(max_length=200)
 
 class Meta:
-        app_label = 'Loginify'
+    app_label = 'Loginify'
 
     def __str__(self):
         return self.username
